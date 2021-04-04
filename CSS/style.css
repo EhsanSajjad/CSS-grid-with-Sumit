@@ -1,0 +1,184 @@
+
+.container{
+    text-align: center;
+    font-size: 28px;
+    margin: 30px;
+
+    display: grid;
+    /* grid-template-columns: 100px auto 100px; */
+    /* grid-template-columns: 2fr 1fr; */
+    /* grid-template: 1fr 2fr / 1fr 3fr; */
+
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-row-gap: 5px;
+    grid-column-gap: 5px; */
+    grid-gap: 5px;
+    
+    
+}
+
+
+.container2{
+    height: 100%;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    margin: 30px;
+
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+    ". h h h h h h h h h h h"
+    "m m m c c c c c c c c c"
+    ". f f f f f f f f f f f"
+    ;
+
+}
+
+
+.header{
+    grid-area: h;
+}
+.menu{
+    grid-area: m;
+}
+.content{
+    grid-area: c;
+}
+.footer{
+    grid-area: f;
+}
+
+
+/* or */
+
+/* 
+.header{ */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* grid-column: 1 / 3;  */
+    /* grid-column: 2 / -1;
+}
+.footer{
+    grid-column: 2 / -1;    means: tumi border no 1 e suru hou and border no 3 porjonto thako. */
+    /* or */
+    /* grid-column: 1 / span 2;      means: tumi border no 1 e suru hou and choriye jao 2 column porjonto. tai span use kora hoyeche. */
+/* }
+.menu{
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+}
+.content{
+    grid-column: 2 / -1;
+} */
+
+
+
+.container2 div:nth-child(1n){
+    background-color: red;
+}
+.container2 div:nth-child(3n){
+    background-color: orange;
+}
+.container2 div:nth-child(2n){
+    background-color: blueviolet;
+}
+.container2 div:nth-child(4n){
+    background-color: green;
+}
+
+
+
+
+.container3{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, 150px); */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 50px;
+
+    height: 400px;
+    margin: 30px;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+
+.container3 div:nth-child(1n){
+    background-color: red;
+    
+}
+.container3 div:nth-child(3n){
+    background-color: orange;
+}
+.container3 div:nth-child(2n){
+    background-color: blueviolet;
+}
+.container3 div:nth-child(4n){
+    background-color: deeppink;
+}
+.container3 div:nth-child(5n){
+    background-color: purple;
+}
+.container3 div:nth-child(6n){
+    background-color: green;
+}
+
+
+
+
+
+
+.container4{
+    display: grid;
+    height: 100%;
+    font-size: 28px;
+    grid-template-columns: repeat(5, 90px);
+    grid-template-rows: repeat(2, 90px);
+    grid-gap: 3px;
+    padding: 3px;
+    
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align-content: center; */
+
+    /* justify-items: center; */
+    /* justify-items: end; */
+
+    /* align-items: center; */
+    /* align-items: end; */
+
+}
+.seven{
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+.container4 div:nth-child(1n){
+    background-color: rebeccapurple;
+    
+}
+.container4 div:nth-child(3n){
+    background-color: olive;
+}
+.container4 div:nth-child(2n){
+    background-color: blue;
+}
+.container4 div:nth-child(4n){
+    background-color: hotpink;
+}
+.container4 div:nth-child(5n){
+    background-color: teal;
+}
+.container4 div:nth-child(6n){
+    background-color: olive;
+}
